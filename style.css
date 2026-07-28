@@ -1,0 +1,67 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #04040a;
+  color: #f5f2ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(94, 51, 255, 0.16), transparent 26%),
+              radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 20%),
+              #04040a;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  left: 24px;
+  top: 24px;
+  z-index: 1;
+  max-width: 420px;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: rgba(4, 4, 10, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.overlay h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  letter-spacing: 0.03em;
+}
+
+.overlay p {
+  margin: 0;
+  line-height: 1.6;
+  color: #cdd2ff;
+}
+
+.overlay strong {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .overlay {
+    left: 16px;
+    top: 16px;
+    right: 16px;
+  }
+}
